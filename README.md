@@ -6,9 +6,11 @@ GPT api를 사용하여 욕설 리폿 기준을 설정한 후 리폿될 플레�
 
 ['Garen', ':', '-4', 'Leesin', ':', '-3', 'Karma', ':', '0', 'Apelios', ':', '0', 'Yumi', ':', '0']
 
+
 욕설제제를 받을 플레이어
 
 Garen: -4
+
 Leesin: -3
 
 여기서 감점이 가장 높은 두 사람은 변수로 할당되고 리폿대상으로 설정됩니다.
@@ -25,9 +27,11 @@ If chatting log is putted the result is printed as a list form like
 
 ['Garen', ':', '-4', 'Leesin', ':', '-3', 'Karma', ':', '0', 'Apelios', ':', '0', 'Yumi', ':', '0']
 
+
 Abusive players
 
 Garen: -4
+
 Leesin: -3
 
 Here, I have set the two people with the highest deduction points as the report target,
