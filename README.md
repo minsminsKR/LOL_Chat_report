@@ -15,6 +15,7 @@ Leesin: -3
 언제든지 원하는대로 리폿 기준을 변경할 수 있습니다.
 
 
+# ENG.
 
 
 Use GPT api to set the criteria for abusive words reporting and then decide which players to report.
