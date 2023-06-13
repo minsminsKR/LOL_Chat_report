@@ -6,7 +6,6 @@ GPT api를 사용하여 욕설 리폿 기준을 설정한 후 리폿될 플레�
 
 ['Garen', ':', '-4', 'Leesin', ':', '-3', 'Karma', ':', '0', 'Apelios', ':', '0', 'Yumi', ':', '0']
 
-
 욕설제제를 받을 플레이어
 
 Garen: -4
@@ -17,16 +16,13 @@ Leesin: -3
 
 언제든지 원하는대로 리폿 기준을 변경할 수 있습니다.
 
-
 # ENG.
-
 
 Use GPT api to set the criteria for abusive words reporting and then decide which players to report.
 
 If chatting log is putted the result is printed as a list form like
 
 ['Garen', ':', '-4', 'Leesin', ':', '-3', 'Karma', ':', '0', 'Apelios', ':', '0', 'Yumi', ':', '0']
-
 
 Abusive players
 
