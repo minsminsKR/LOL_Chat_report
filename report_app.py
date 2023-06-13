@@ -1,3 +1,5 @@
+# 일해라 라이엇!
+
 import openai
 import os
 from dotenv import load_dotenv
@@ -14,6 +16,7 @@ user4 = "Apelios"
 user5 = "Yumi"
 
 # 채팅 예시
+# Chatting example
 chat = [f"{user1} : You crazy?", 
         f"{user2} : Wassup..?",
         f"{user1} : Gank here bxxch",
@@ -24,7 +27,8 @@ chat = [f"{user1} : You crazy?",
         f"{user4} : We never fight like them Yumi.",
         f"{user5} : Sure!"]
 
-# 프롬프트 불러오기(예시를 알려줘야 하기때문에 욕설이 포함되어 있음)
+# 프롬프트 불러오기(욕설이 포함되어 있음)
+# Load prompt(enclosing abusive words)
 with open("prompt_report.txt", "r", encoding="utf-8") as file:
     prompt = file.read()
 
@@ -53,10 +57,12 @@ def Report_system():
             value = int(result[i + 2]) # 리폿점수
             champ_dict[champ_name] = value
 
-        # 가장 작은 수를 가진 두 캐릭터를 뽑기 위한 코드
+        # 가장 감점이 큰 두 챔피언 뽑기
+        # Pick the two champions with the most points deducted
         smallest_two = sorted(champ_dict.items(), key=lambda x: x[1])[:2]# 두 번째 요소(value)를 기준으로 정렬 x[1]
 
         # 결과 출력
+        # Print result
         print("욕설제제를 받을 플레이어")
         for champ_name, value in smallest_two:
             print(f"{champ_name}: {value}")
@@ -64,6 +70,7 @@ def Report_system():
     chat_report == False
 
 # 리포트 버튼 누르면 True가 된다고 가정
+# Assume that the report button is true when pressed
 chat_report = True
 if chat_report == True:
     Report_system()
