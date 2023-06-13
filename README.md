@@ -1,5 +1,7 @@
 # LOL_Chat_report
 
+Use GPT api to set the criteria for abusive words reporting and then decide which players to report.
+
 If chatting log is putted the result is printed as a list form like
 
 ['Garen', ':', '-4', 'Leesin', ':', '-3', 'Karma', ':', '0', 'Apelios', ':', '0', 'Yumi', ':', '0']
