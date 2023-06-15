@@ -16,6 +16,12 @@ Leesin: -3
 
 언제든지 원하는대로 리폿 기준을 변경할 수 있습니다.
 
+Third Commit,
+
+예외를 설정하여 원하는 형식 이외의 대답을 할 시 False를 반환하여 
+
+Report_system()를 재시작합니다.
+
 # ENG.
 
 Use GPT api to set the criteria for abusive words reporting and then decide which players to report.
@@ -33,3 +39,9 @@ Leesin: -3
 Here, I have set the two people with the highest deduction points as the report target,
 
 but you guys can change the criteria anytime you want.
+
+Third Commit,
+
+Set an exception to give an answer other than the desired format, return False
+
+Restart Report_system().
