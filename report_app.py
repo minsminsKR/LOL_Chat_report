@@ -30,6 +30,32 @@ chat = [f"{user1} : You crazy?",
 # 프롬프트 불러오기(예시를 알려줘야 하기때문에 욕설이 포함되어 있음)
 with open("prompt_report.txt", "r", encoding="utf-8") as file:
     prompt = file.read()
+    
+def is_valid_format(lst): # 형식 안맞을시 False 반환
+                          # Returns False if malformed
+    if not lst or len(lst) % 3 != 0: # 인풋이 없거나 ["챔피언이름", ":", "점수"] 이 형식처럼 리스트 길이가 3배수인지 체크
+                                     # Check if there is no input or if the length is 3 times as list above
+        return False
+
+    valid = True
+    for idx, elem in enumerate(lst):
+        if idx % 3 == 0: # 0부터 시작. idx 0,3,6... 챔피언 이름 위치에 문자열이 있는가?
+                         # Start from zero. Idx 0,3,6... Is there a string in the champion name position?
+            if not isinstance(elem, str):
+                valid = False
+                break
+        elif idx % 3 == 1: # 챔피언 이름 다음 위치에 ":"이 있는가?
+                           # Is there a ":" next to the champion name?
+            if elem != ':':
+                valid = False
+                break
+        else: # 점수 자리에 정수가 있는가? Istrip('-')은 -를 빼고 숫자 맞는지 체크
+              # Is there an integer in the place of the score?
+            if not (isinstance(elem, str) and elem.lstrip('-').isdigit()):
+                valid = False
+                break
+
+    return valid
 
 def Report_system():
 
@@ -61,7 +87,8 @@ def Report_system():
 
         # 가장 감점이 큰 두 챔피언 뽑기
         # Pick the two champions with the most points deducted
-        smallest_two = sorted(champ_dict.items(), key=lambda x: x[1])[:2]# 두 번째 요소(value)를 기준으로 정렬 x[1]
+        smallest_two = sorted(champ_dict.items(), key=lambda x: x[1])[:2] # 두 번째 요소(value)를 기준으로 정렬 x[1]
+                                                                          # Sort by second element (value) x[1]
 
         # 결과 출력
         # Print result
