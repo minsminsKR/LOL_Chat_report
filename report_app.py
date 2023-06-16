@@ -28,6 +28,7 @@ chat = [f"{user1} : You crazy?",
         f"{user5} : Sure!"]
 
 # 프롬프트 불러오기(예시를 알려줘야 하기때문에 욕설이 포함되어 있음)
+# Load prompt(contain abusive words)
 with open("prompt_report.txt", "r", encoding="utf-8") as file:
     prompt = file.read()
     
